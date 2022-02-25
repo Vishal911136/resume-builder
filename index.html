@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+
+    <!--! PoP Up Part  -->
+    <div id="educationPopup" class="education_popup">
+        <div class="popup_box">
+            <div class="popup_input_container">
+                <h4>Edit Education</h4><hr style="color: white;">
+                <div class="input_field">
+                    <label for="">Class/Degree<sup>*</sup></label><br>
+                    <input id="subject" type="text" placeholder="Ex:12th" required>
+                </div>
+                <div class="input_field">
+                    <label for="">Intitution /   Board<sup>*</sup></label><br>
+                    <input id="intitute" type="text"  placeholder="Collage / School name" required>
+                </div>
+                <div class="input_field">
+                    <label for="">CGPA / Percentage<sup>*</sup></label><br>
+                    <input id="percentage" type="text"  placeholder="Enter Percentage" required>
+                </div>
+                <div class="input_field">
+                    <label for="">Year<sup>*</sup></label><br>
+                    <input id="year" type="text"  placeholder="Year Of Passout" required>
+                </div>
+                <div class="popupbtn">
+                    <button class="" onclick="educationFun()">Submit</button>
+                    <button class="close" onclick="closefun()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- !Experience popup -->
+    <div id="experiencePopup" class="experience_popup">
+        <div class="popup_box">
+            <div class="popup_input_container">
+                <h4>Edit Experience</h4><hr style="color: white;">
+                <div class="input_field">
+                    <label for="">Experience<sup>*</sup></label><br>
+                    <textarea style="max-width: 100%; max-height: 300px;" id="idExperience" type="text" placeholder="Enter your experience & internship" value=""></textarea>
+                </div>
+                
+                <div class="popupbtn">
+                    <button class="" onclick="experienceFun()">Submit</button>
+                    <button class="close" onclick="closefun()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ! Project Popup -->
+    <div id="projectPopup" class="project_popup">
+        <div class="popup_box">
+            <div class="popup_input_container">
+                <h4>Add Project</h4><hr style="color: white;">
+                <div class="input_field">
+                    <label for="">Title<sup>*</sup></label><br>
+                    <input id="title" type="text" placeholder="Title" required>
+                </div>
+                <div class="input_field">
+                    <label for="">Github code url</label><br>
+                    <input id="githublink" type="text"  placeholder="project code link" required>
+                </div>
+                <div class="input_field">
+                    <label for="">Hosted link</label><br>
+                    <input id="hostlink" type="text" placeholder="url" required>
+                </div>
+                <div class="input_field">
+                    <label for="">About Project<sup>*</sup></label><br>
+                    <textarea id="aboutProject" style="max-width: 100%; max-height: 100px" type="text"  placeholder="Project Details"></textarea>
+                </div>
+                <div class="popupbtn">
+                    <button class="" onclick="projectFun()">Submit</button>
+                    <button class="close" onclick="closefun()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ! Skills Popup -->
+    <div id="skillsPopup" class="skills_popup">
+        <div class="popup_box">
+            <div class="popup_input_container">
+                <h4>Add Skills</h4><hr style="color: white;">
+                <div class="input_field">
+                    <label for="">Frontend technology<sup>*</sup></label><br>
+                    <input id="title" type="text" placeholder="Title" required>
+                </div>
+                <div class="input_field">
+                    <label for="">Github code url</label><br>
+                    <input id="pjlink" type="text"  placeholder="project code link" required>
+                </div>
+                <div class="input_field">
+                    <label for="">Hosted link</label><br>
+                    <input id="htlink" type="text" placeholder="url" required>
+                </div>
+                <div class="input_field">
+                    <label for="">About Project<sup>*</sup></label><br>
+                    <textarea id="aboutProject" style="max-width: 100%; max-height: 100px" type="text"  placeholder="Project Details"></textarea>
+                </div>
+                <div class="popupbtn">
+                    <button class="" onclick="skillsFun()">Submit</button>
+                    <button class="close" onclick="closefun()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="hideHeading" class="heading">
+        <h2>Resume Builder</h2>
+    </div>
+
+    <div id="hidePage" class="resume_maker container">
+        <div class="input_container">
+            <div class="input_left">
+                <h4>Personal Information</h4>
+                <div class="input_field">
+                    <label class="label_name">Your Name<sup>*</sup></label><br>
+                    <input id="uname" class="" type="text" placeholder="Enter Name" value="" required>
+                </div>
+
+                <div class="input_field">
+                    <label class="label_name">Profession<sup>*</sup></label><br>
+                    <input id="profession" class="" type="text" placeholder="ex: frontend Developer" value="" required>
+                </div>
+
+                <div class="input_field">
+                    <label class="label_name">Number<sup>*</sup></label><br>
+                    <input id="moNumber" class="" type="text" placeholder="Enter Mobile number" value="" required>
+                </div>
+
+                <div class="input_field">
+                    <label class="label_name">Email<sup>*</sup></label><br>
+                    <input id="email" class="" type="text" placeholder="Email" value="" required>
+                </div>
+
+                <div class="input_field">
+                    <label class="label_name">LinkedIn</label><br>
+                    <input id="linkedInlink" class="" type="text" placeholder="Enter Linkedin Link" value="" required>
+                </div>
+                
+                <div class="input_field">
+                    <label class="label_name">Github Id</label><br>
+                    <input id="githubId" class="" type="text" placeholder="Git hub" value="" required>
+                </div>
+
+                <div class="input_field">
+                    <label class="label_name">Address<sup>*</sup></label><br>
+                    <textarea id="address" style="max-width: 600px" class="" placeholder="Address" value="" required></textarea>
+                </div>
+            </div>
+            
+            <div class="input_right">
+                <!-- ! Education -->
+                <h4>Education</h4>
+                <div class="input_field">
+                    <div class="add_container">
+                        <label class="label_name">Qalification</label>
+                        <button onclick="educationPopup()" >+</button>
+                    </div>
+                    <div  id="addEducation">
+                        <!-- <div class="show_education">
+                            <span class="print_sub_name">12th</span>
+                            <span class="print_intitute_name">Technocrats bhopal</span>
+                        </div> -->
+                    </div>
+                </div><br><hr>
+
+
+                <!-- ! Exeperience  -->
+                <div class="input_field">
+                    <div class="add_container">
+                        <label class="label_name">Experience</label>
+                        <button onclick="experiencePopup()" >+</button>
+                    </div>
+                    <div  id="showExperience">
+                        
+                    </div>
+                </div><br><hr>
+
+                <!-- ! Projects -->
+                <div class="input_field">
+                    <div class="add_container">
+                        <label class="label_name">Projects</label>
+                        <button onclick="projectPopup()" >+</button>
+                    </div>
+                    <div id="showProjects">
+                        <!-- <p>Facebook clone page</p>
+                        <a href="facebool.com">Host Link</a> -->
+                    </div>
+                </div><br><hr>
+
+                <!-- !Skills -->
+                <div class="input_field">
+                    <div class="add_container">
+                        <label class="label_name">Skills</label>
+                    </div>
+                    <div id="showskills" class="show_skills">
+                        <p>Example : </p><button>C</button><button>PHP</button><button>Java</button>
+                    </div>
+                        <div class="skillsinput">
+                            <input id="skills" type="text" placeholder="Enter skills">
+                            <button onclick="addSkills()" >+</button>
+                        </div>
+                </div><br>
+
+                <button id="generateBtn" onclick="generateResume()" class="generate_btn">Generate Resume</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ! Resume Html -->
+    <div id="showResume" class="resume_container">
+        <div id="resumePage" class="resume_page">
+            <div class="resume_heading">
+                <h3 id="rName">Vishal Sharma</h3>
+                <p id="rprofession">Frontend Developer</p>
+            </div>
+    
+            <div class="info_heading">
+                <div>
+                    <i class="uil uil-envelope"></i>
+                    <span id="rEmail"> vishalsharma9111.vs@gmail.com</span>
+                </div>
+                <div>
+                    <i class="uil uil-phone"></i>
+                    <span id="rNumber"> 9111363002</span>
+                </div>
+                <div id="hideGit">
+                    <i class="uil uil-github"></i>
+                    <span id="rgitLink"> github.com/vishal9111</span>
+                </div>
+                <div id="hideLinkedIn">
+                    <i class="uil uil-linkedin"></i>
+                    <span id="rLinkedIn"> https://linkedin/header/vishal-sharma</span>
+                </div>
+                <div>
+                    <i class="uil uil-map-marker"></i><span id="rAddress"> Chhindwara Mp India , 480110</span>
+                </div>
+            </div>
+    
+            <div class="education_table">
+                <div class="section_arrow">
+                    <div class="border"></div><h4>Education</h4>
+                </div>
+                <div class="maintable">
+                    <div id="showEducationTable">
+                    <!-- <table>
+                        <tr>
+                            <th class="year">Year</th>    
+                            <th class="course">Class / Subject</th>
+                            <th class="collage">Collage / School</th>
+                            <th class="cgpa">CGPA / Percentage</th>
+                        </tr>
+                            <tr>
+                                <td>2019</td>
+                                <td>BCA</td>
+                                <td>Technocrats bhopal Technocrats bhopal Technocrats bhopal</td>
+                                <td>59.9%</td>
+                            </tr>
+                        </div>
+                    </table> -->
+                </div>
+            </div>
+    
+            <div class="education_table">
+                <div class="section_arrow">
+                    <div class="border"></div><h4>Experience</h4>
+                </div>
+                <div id="resumeExperience" class="resume_content">
+                    <p> i have 2 years experience of customer excutive in bpo(agis)</p>
+                </div>
+            </div>
+    
+            <div class="education_table">
+                <div class="section_arrow">
+                    <div class="border"></div><h4>Skills</h4>
+                </div>
+                <div id="resumeSkills" class="resume_content show_skills">
+                    <button>C</button><button>html</button><button>java</button>
+                </div>
+            </div>
+    
+            <div class="education_table">
+                <div class="section_arrow">
+                    <div class="border"></div><h4>Projects</h4>
+                </div>
+                <div id="resumeProjects" class="resume_content">
+                    <div id="resumeProjects" class="resume_project_info">
+                        <p class="project_title"> 1. Facebook Login Clone <a href="">(Host Link)</a><a href="">(Code Link)</a></p>
+                        <p class="project_description">I created this project for practice and i was used html,css java script</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ! End Resume html-->
+    <button class="print_btn" onclick="printResume()">Print Resume</button>
+
+
+
+
+
+<!-- ! Internal Javascript -->
+    <script>
+        
+    </script>
+<!-- ! End -->
+
+
+    <script src="index.js"></script>
+</body>
+</html>
